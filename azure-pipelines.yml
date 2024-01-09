@@ -18,7 +18,7 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     mavenVersionOption: 'Path'
-    mavenDirectory: 'C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6\lib'
+    mavenDirectory: 'C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6\lib\'
     mavenSetM2Home: true
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
