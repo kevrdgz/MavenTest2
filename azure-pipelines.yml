@@ -11,12 +11,14 @@ pool:
 
 steps:
   
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
+    javaHomeOption: 'Path'
+    jdkDirectory: 'C:\Users\kevinrodr\Desktop\maven'
     mavenVersionOption: 'Path'
     mavenDirectory: 'C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6'
     mavenSetM2Home: false
