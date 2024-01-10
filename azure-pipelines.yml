@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: kev-pool
+  vmImage: windows-latest
 
 steps:
   
@@ -16,11 +16,9 @@ steps:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'Path'
-    jdkDirectory: 'C:\Users\kevinrodr\Desktop\maven'
-    mavenVersionOption: 'Path'
-    mavenDirectory: 'C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6'
-    mavenSetM2Home: true
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
