@@ -18,13 +18,18 @@ steps:
       
       
 - task: Bash@3
+  name: bash1
+  inputs:
+    targetType: 'inline'
+    script: 'echo ##vso[task.setvariable variable=JAVA_HOME]/C:\Users\kevinrodr\Desktop\maven" && ##vso[task.setvariable variable=M2_HOME]/C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6" && echo ##vso[task.setvariable variable=MAVEN_HOME]/C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6"'
+- task: Bash@3
+  name: bash2
   inputs:
     targetType: 'inline'
     script: |
       # Write your commands here
       
-      echo "##vso[task.setvariable variable=PATH]$(M2_HOME)/bin:$(PATH)" && echo ##vso[task.setvariable variable=M2_HOME]/C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6" && echo ##vso[task.setvariable variable=MAVEN_HOME]/C:\Users\kevinrodr\Desktop\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6"
-
+      echo "##vso[task.setvariable variable=PATH]$(M2_HOME)/bin:$(PATH)"
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
